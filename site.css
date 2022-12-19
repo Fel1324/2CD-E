@@ -1,0 +1,291 @@
+/* GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #FFF;
+    --header-footer-background-color: #FD3030;
+    --font-color: #000;
+
+    --font: 'Roboto', sans-serif;
+
+    font-size: 62.5%;
+}
+
+html, body{
+    background-color: var(--background-color);
+    color: var(--font-color);
+
+    width: 100%;
+    height: 100%;
+
+    font-family: var(--font);
+}
+
+a{
+    color: var(--font-color);
+
+    text-decoration: none;
+}
+
+/* HEADER */
+.header{
+    background-color: var(--header-footer-background-color);
+
+    padding: 3rem;
+
+    width: 100%;
+}
+
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin-inline: auto;
+}
+
+.header__logo{
+    width: 40rem;
+}
+
+.header__lista{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 6rem;
+    row-gap: 3rem;
+
+    list-style: none;
+}
+
+.header__link{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.header__link:hover{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1600px) {
+    .header__logo{
+        width: 30rem;
+    }
+
+    .header__link{
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header__content{
+        width: 90%;
+    }
+
+    .header__link{
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .header__content{
+        width: 95%;
+    }
+
+    .header__logo{
+        width: 24rem;
+    }
+
+    .header__link{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .header__content{
+        flex-direction: column;
+        gap: 3.2rem;
+    
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .header__lista{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* MAIN */
+.main{
+    width: 100%;
+
+    padding-block: 10rem;
+}
+
+.main__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 14rem;
+    row-gap: 20rem;
+
+    text-align: center;
+
+    width: 70%;
+
+    margin-inline: auto;
+}
+
+.main__produtoImg{
+    vertical-align: top;
+
+    width: 100%;
+    height: 38rem;
+}
+
+.main__produtoNome{
+    font-size: 3.8rem;
+
+    margin-block: 2rem;
+}
+
+.main__produtoNome:hover{
+    text-decoration: underline;
+}
+
+.main__produtoPreco{
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1700px) {
+    .main__produtoImg{
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .main__produtoImg{
+        height: 22rem;
+    }
+
+    .main__produtoNome{
+        font-size: 3.2rem;
+    }
+
+    .main__produtoPreco{
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .main__content{
+        column-gap: 14rem;
+
+        width: 80%;
+    } 
+}
+
+@media screen and (max-width: 1200px) {
+    .main__content{
+        column-gap: 10rem;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    .main__produtoImg{
+        height: 18rem;
+    }
+
+    .main__produtoNome{
+        font-size: 2.6rem;
+    }
+
+    .main__produtoPreco{
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main__content{
+        grid-template-columns: 1fr 1fr;
+        gap: 16rem;
+        width: 70%;
+    }
+
+    .main__produtoImg{
+        height: 22rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__content{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .main__produtoImg{
+        height: 18rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main__content{
+        grid-template-columns: 1fr;
+        gap: 16rem;
+        width: 50%;
+    }
+
+    .main__produtoImg{
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .main__produtoImg{
+        height: 24rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main__content{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .main__content{
+        width: 85%;
+    }
+}
+
+/* FOOTER */
+.footer{
+    background-color: var(--header-footer-background-color);
+
+    padding: 6rem;
+}
+
+.footer__copy{
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1440px) {
+    .footer__copy{
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer__copy{
+        font-size: 2rem;
+    }
+}
